@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User } = require("../../models/User");
-router.post("/", (req, res) => {
+router.post("/singup", (req, res) => {
+  //to do add check body params(if(!username || !email))
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -16,8 +17,9 @@ router.post("/", (req, res) => {
       });
     })
     .catch((err) => {
-      console.log(err);
-      res.json(err);
+      console.log();
+
+      res.json({ message: "singnup has failed" });
     });
 });
 
