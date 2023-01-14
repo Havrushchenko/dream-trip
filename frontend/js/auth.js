@@ -16,7 +16,8 @@ async function signupFormHandler(event) {
     //   }),
     //   headers: { "Content-Type": "application/json" },
     // }).then((response) => {
-    //   console.log(response);
+    //   to do redirect to, window.location.replace
+    //console.log(response);
     // });
   }
 }
