@@ -8,7 +8,7 @@ User.hasMany(Ticket, {
     foreignKey: 'user_id'
 });
 
-User.belongsToMany(Ticket, {
+User.belongsTo(Ticket, {
     foreignKey: 'user_id'
 });
 
