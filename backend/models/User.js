@@ -31,15 +31,7 @@ User.init(
       validate: {
         len: [4],
       },
-    },
-    current_ticket: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "booking",
-        key: "price",
-      },
-    },
+    },.
   },
   {
     // pass in our imported sequelize connection (the direct connection to our database)
