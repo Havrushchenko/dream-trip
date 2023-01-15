@@ -26,15 +26,15 @@
       </div>
 
       <div class="col-md-6 text-end">
-        <a
-          href="./login-form.html"
-          type="button"
-          class="btn btn-outline-primary me-2"
-        >
+        <a href="/" type="button" class="btn btn-outline-primary me-2">
           Login
         </a>
-        <a type="button" class="btn btn-outline-primary me-2"> Logout </a>
-        <a href="/" type="button" class="btn btn-primary">Sign-up</a>
+        <a href="/" type="button" class="btn btn-outline-primary me-2">
+          Logout
+        </a>
+        <a href="./signup-form.html" type="button" class="btn btn-primary"
+          >Sign-up</a
+        >
         <button type="button" class="btn btn-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,22 +54,14 @@
     </header>
 
     <main style="height: 100%">
-      <form class="w-25 p-3 signup-form container center_div">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-        <div class="form-floating p-2">
-          <input
-            type="name"
-            class="form-control"
-            id="username-signup"
-            placeholder="name"
-          />
-          <label for="floatingInput">Name</label>
-        </div>
+      <form class="w-25 p-3 container center_div login-form">
+        <h1 class="h3 mb-3 fw-normal">Please login</h1>
+
         <div class="form-floating p-2">
           <input
             type="email"
             class="form-control"
-            id="email-signup"
+            id="email-login"
             placeholder="name@example.com"
           />
           <label for="floatingInput">Email address</label>
@@ -78,14 +70,17 @@
           <input
             type="password"
             class="form-control"
-            id="password-signup"
+            id="password-login"
             placeholder="Password"
           />
           <label for="floatingPassword">Password</label>
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary p-2" type="submit">
-          Sign in
+        <button
+          class="w-100 btn btn-lg btn-primary p-2 login-form"
+          type="submit"
+        >
+          Login
         </button>
       </form>
     </main>
@@ -97,6 +92,6 @@
       </ul>
       <p class="text-center text-muted">© 2023 Dream-Trip, Inc</p>
     </footer>
-    <script src="./js/signup.js"></script>
+    <script src="./js/login.js"></script>
   </body>
 </html>
