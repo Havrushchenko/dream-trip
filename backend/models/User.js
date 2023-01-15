@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const bcrypt = require("bcrypt");
 
 // create our User model
 class User extends Model {
@@ -24,7 +25,7 @@ User.init(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
+      // unique: true,
       validate: {
         isEmail: true,
       },
