@@ -2,30 +2,30 @@ const User = require('./User');
 const Flightout = require('./Flightout');
 const Ticket = require('./Ticket');
 const Booking = require('./Booking');
-const Airplane = require('./Airplane');
 
-User.hasMany(Ticket, {
+User.hasOne(Booking, {
     foreignKey: 'user_id'
 });
 
-User.belongsToMany(Ticket, {
+Booking.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-User.hasMany(Booking, {
-    foreignKey: 'user_id'
+Booking.hasOne(Ticket, {
+    foreignKey: 'ticket_id',
+    // onDelete: 'CASCADE'
 });
 
-User.hasMany(Airplane, {
-    foreignKey: 'user_id'
+Ticket.belongsTo(Booking, {
+    foreignKey: 'ticket_id'
 });
 
-Ticket.belongsTo(User, {
-    foreignKey: 'user_id'
+Ticket.hasOne(Flightout, {
+    foreignKey: 'flightout_id'
 });
 
-Booking.hasMany(Ticket, {
-    foreignKey: 'user_id'
+Flightout.belongsTo(Ticket, {
+    foreignKey: 'flightout_id'
 });
 
-module.exports = { User, Flightout, Ticket, Booking, Airplane };
+module.exports = { User, Flightout, Ticket, Booking };

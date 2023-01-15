@@ -13,56 +13,23 @@ Ticket.init(
             primaryKey: true,
             autoIncrement: true
         },
-        departure: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            references: {
-                model: 'flightout',
-                key: 'departure'
-            }
-        },
-        destination: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            references: {
-                //TODO
-                model: 'flightout',
-                key: 'destination'
-            }
-        },
         price: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        airplane_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false, 
-            references: {
-                model: 'airplane',
-                key: 'id'
-            } 
-        },
         departure_time: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: {
-                model: 'flightout',
-                key: 'departure_time'
-            }
         },
         arrival_time: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: {
-                model: 'flightout',
-                key: 'arrival_time'
-            }
         },
-        airplane_id: {
+        flightout_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'airplane',
+                model: 'flightout',
                 key: 'id'
             }
         },

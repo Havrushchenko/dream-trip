@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../../config/connection');
+const sequelize = require('../config/connection');
 
 // create our User model
 class Flightout extends Model { }
@@ -16,32 +16,15 @@ Flightout.init(
         flight_number: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            autoIncrement: true
         },
-        departure: {
+        departure_city: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        destination: {
+        destination_city: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        flight_number: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        airplane_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        departure_time: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        arrival_time: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        }
     },
     {
         // pass in our imported sequelize connection (the direct connection to our database)
