@@ -36,14 +36,14 @@ User.init(
         len: [4],
       },
     },
-    current_ticket: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "booking",
-        key: "price",
-      },
-    },
+    // current_ticket: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: "booking",
+    //     key: "price",
+    //   },
+    // },
   },
   {
     //add hooks
