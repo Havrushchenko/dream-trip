@@ -3,17 +3,17 @@ const { Flightout } = require('../models');
 
 const flightoutdata = [
   {
-    flight_number: 1,
-    departure_city: 'Lviv',
-    destination_city: 'Kyiv'
+    flight_number: 607,
+    departure_city: 'San Francisco',
+    destination_city: 'Houston'
   },
   {
-    flight_number: 2,
-    departure_city: 'Kyiv',
+    flight_number: 098,
+    departure_city: 'Dallas',
     destination_city: 'New York'
   },
   {
-    flight_number: 3,
+    flight_number: 001,
     departure_city: 'New York',
     destination_city: 'LA'
   },

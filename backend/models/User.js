@@ -32,14 +32,14 @@ User.init(
         len: [4]
       }
     },
-    current_ticket: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'booking',
-        key: 'price'
-      }
-    }
+    //     booking_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'booking',
+    //     key: 'id'
+    //   }
+    // }
   },
   {
     // pass in our imported sequelize connection (the direct connection to our database)
