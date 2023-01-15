@@ -31,7 +31,7 @@ User.init(
       validate: {
         len: [4],
       },
-    },.
+    },
   },
   {
     // pass in our imported sequelize connection (the direct connection to our database)
