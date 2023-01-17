@@ -1,4 +1,4 @@
-async function loginFormHandler(event) {
+function loginFormHandler(event) {
   event.preventDefault();
 
   const email = document.querySelector("#email-login").value.trim();
@@ -18,11 +18,14 @@ async function loginFormHandler(event) {
         return response.json();
       })
       .then((dbData) => {
-        if (dbData.status == "OK") {
+        console.log(dbData);
+        if (dbData.user) {
           window.location.replace("/");
-        } else {
-          alert(dbData.message);
         }
+      })
+      .catch((err) => {
+        res.status(500).json(err);
+        alert(dbData.message);
       });
   }
 }
