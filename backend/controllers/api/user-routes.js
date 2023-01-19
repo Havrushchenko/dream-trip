@@ -52,10 +52,21 @@ router.post("/login", (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
+      console.log(req.session.loggedIn);
 
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });
   });
+});
+router.post("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.json({message:"You are logout"})
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
 });
 
 module.exports = router;

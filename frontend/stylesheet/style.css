@@ -8,7 +8,8 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../assets/img/background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("../assets/img/background.jpg");
 }
 
 header {
@@ -171,6 +172,12 @@ ul {
 .logo {
   display: flex;
   justify-content: center;
+}
+/* make style for page terms-of-use */
+#blockText {
+  padding: 40px;
+  color: white;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 768px) {
