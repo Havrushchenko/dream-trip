@@ -27,6 +27,7 @@ app.set("view engine", "handlebars");
 app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// app.use(express.static("../frontend"));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
