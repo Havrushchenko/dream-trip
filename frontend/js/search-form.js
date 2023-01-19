@@ -1,30 +1,29 @@
+
 $('.datepicker').datepicker({
-    format: 'mm/dd/yyyy',
+  format: 'mm/dd/yyyy',
 });
 
-async function loginFormHandler(event) {
-    event.preventDefault();
+const departure = document.querySelector('[name="departure"]')
+const destination = document.querySelector('[name="destination"]')
+const datepicker = document.querySelector('.datepicker')
 
-    const departure = document.querySelector("#departure").value.trim();
-    const destination = document.querySelector("#destination").value.trim();
-    // const datepicker = document.querySelector(".datepicker").value.trim();
-
-    if (departure && destination) {
-        const response = await fetch('/api/users/search', {
-            method: 'GET',
-            body: JSON.stringify({
-                departure,
-                destination
-            }),
-            headers: { 'Content-Type': 'application/json' }
-        });
-
-        if (response.ok) {
-            console.log("Your flight is...");
-        } else {
-            alert(response.statusText);
-        }
+function getApi(event) {
+  event.preventDefault()
+  fetch('http://localhost:3001/api/flightouts/search', {
+    method: "POST",
+    body: JSON.stringify({
+      departure_city: departure.value.trim(),
+      destination_city: destination.value.trim()
+    }),
+    headers: {
+      'Content-Type': 'application/json'
     }
+  })
+    .then(function (res) {
+      res.json().then(function (data) {
+        console.log(data);
+      });
+    })
 }
 
-document.querySelector(".search-form").addEventListener("submit", loginFormHandler);
+document.querySelector(".search-form").addEventListener("submit", getApi);

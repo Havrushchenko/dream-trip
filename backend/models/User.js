@@ -20,7 +20,6 @@ User.init(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         isEmail: true
       }
@@ -32,14 +31,6 @@ User.init(
         len: [4]
       }
     },
-    //     booking_id: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    //   references: {
-    //     model: 'booking',
-    //     key: 'id'
-    //   }
-    // }
   },
   {
     // pass in our imported sequelize connection (the direct connection to our database)

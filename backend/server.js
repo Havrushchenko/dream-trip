@@ -1,5 +1,7 @@
 const path = require('path');
+// Import and require express
 const express = require('express');
+// Import and require express-session
 const session = require('express-session');
 const sequelize = require('./config/connection');
 const routs = require('./controllers');
@@ -19,12 +21,14 @@ const sess = {
   })
 };
 
+// Express middlewares
 app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static("../frontend"));
 app.use(routs);
 
+// synchronize our sequelize models with our database tables
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });

@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our User model
+// create our Ticket model
 class Ticket extends Model { }
 
 // define table columns and configuration

@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our User model
+// create our Flightout model
 class Flightout extends Model { }
 
 // define table columns and configuration
