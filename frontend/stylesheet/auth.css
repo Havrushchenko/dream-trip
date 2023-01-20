@@ -76,19 +76,15 @@ nav a:hover {
   color: #fff;
 }
 .login-form input,
-.signup-form input:focus {
-  /* border: none; */
+.signup-form:focus {
+  border: none;
   background-color: rgba(0, 0, 0, 0);
-  /* outline: none; */
+  outline: none;
   color: #fff;
   border: hidden;
   outline: none;
 }
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-}
+
 .login-form button,
 .signup-form button {
   border: none;
@@ -100,6 +96,11 @@ select:focus {
   border-bottom-right-radius: 5px;
   color: #fff;
 }
+.signup-form input:active {
+  border: none;
+  outline: none;
+}
+
 ::placeholder {
   color: white;
   opacity: 1;
@@ -117,6 +118,15 @@ select:focus {
   border: none;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+.signup-form input:focus {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  color: #fff;
+  border: hidden;
+  outline: none;
 }
 
 .container-for-signup ::placeholder {
