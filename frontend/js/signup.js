@@ -7,7 +7,7 @@ function signupFormHandler(event) {
 
   if (username && email && password) {
     console.log(username);
-    fetch("/api/users/signup", {
+    fetch("http://localhost:3001/api/users/signup", {
       method: "post",
       body: JSON.stringify({
         username,
@@ -20,8 +20,8 @@ function signupFormHandler(event) {
         return response.json();
       })
       .then((dbData) => {
-        if (dbData.status == "OK") {
-          window.location.replace("/");
+        if (dbData.user) {
+          location.assign("index.html");
         } else {
           alert(dbData.message);
         }

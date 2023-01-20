@@ -65,18 +65,21 @@ nav a:hover {
   display: flex;
   flex-direction: column;
 }
+/* login style */
 .container-for-login {
   width: 450px;
 }
 .login-form div {
   border: none;
-  padding: 7px;
+  padding: 14px;
   background-color: white;
 }
-.login-form input {
+.login-form input,
+.signup-form input {
   border: none;
 }
-.login-form button {
+.login-form button,
+.signup-form button {
   border: none;
   background: tomato;
   padding-right: 18px;
@@ -84,6 +87,16 @@ nav a:hover {
   text-transform: uppercase;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  color: #fff;
+}
+/* signup style */
+.container-for-signup {
+  width: 550px;
+}
+.signup-form div {
+  border: none;
+  padding: 5px;
+  background-color: white;
 }
 
 main {
@@ -154,4 +167,31 @@ ul {
 .logo {
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 7vw;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 4vw;
+  }
+
+  header nav {
+    justify-content: center;
+  }
 }

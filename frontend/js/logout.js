@@ -1,5 +1,5 @@
 function logout() {
-  fetch("/api/users/logout", {
+  fetch("http://localhost:3001/api/users/logout", {
     method: "post",
     headers: { "Content-Type": "application/json" },
   })
@@ -9,8 +9,7 @@ function logout() {
     .then((dbData) => {
       console.log(dbData);
 
-      window.location.replace("/");
-      alert({ message: "You are logout" });
+      location.assign("login-form.html");
     })
     .catch((err) => {
       res.status(500), json(err);

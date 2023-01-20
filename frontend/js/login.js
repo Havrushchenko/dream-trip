@@ -6,7 +6,7 @@ function loginFormHandler(event) {
 
   if (email && password) {
     console.log(email);
-    fetch("/api/users/login", {
+    fetch("http://localhost:3001/api/users/login", {
       method: "post",
       body: JSON.stringify({
         email,
@@ -20,11 +20,11 @@ function loginFormHandler(event) {
       .then((dbData) => {
         console.log(dbData);
         if (dbData.user) {
-          window.location.replace("/");
+          location.assign("index.html");
         }
       })
       .catch((err) => {
-        res.status(500).json(err);
+        response.status(500).json(err);
         alert(dbData.message);
       });
   }
