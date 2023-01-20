@@ -61,7 +61,7 @@ router.post("/login", (req, res) => {
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
-      res.json({ message: "You are logout" });
+      res.json({message:"You are logout"})
       res.status(204).end();
     });
   } else {
