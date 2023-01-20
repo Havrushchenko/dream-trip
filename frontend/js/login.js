@@ -1,4 +1,4 @@
-async function loginFormHandler(event) {
+function loginFormHandler(event) {
   event.preventDefault();
 
   const email = document.querySelector("#email-login").value.trim();
@@ -6,7 +6,7 @@ async function loginFormHandler(event) {
 
   if (email && password) {
     console.log(email);
-    fetch("/api/users/login", {
+    fetch("http://localhost:3001/api/users/login", {
       method: "post",
       body: JSON.stringify({
         email,
@@ -18,11 +18,14 @@ async function loginFormHandler(event) {
         return response.json();
       })
       .then((dbData) => {
-        if (dbData.status == "OK") {
-          window.location.replace("/");
-        } else {
-          alert(dbData.message);
+        console.log(dbData);
+        if (dbData.user) {
+          location.assign("index.html");
         }
+      })
+      .catch((err) => {
+        response.status(500).json(err);
+        alert(dbData.message);
       });
   }
 }

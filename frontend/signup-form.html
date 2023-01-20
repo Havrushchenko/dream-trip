@@ -4,99 +4,119 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dream Trip</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css"
+    />
+    <link rel="stylesheet" href="./stylesheet/auth.css" />
+    <title>Dream Trip</title>
   </head>
+
   <body>
-    <header
-      class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
-    >
-      <div class="text-center col-md-6 row justify-content-start">
-        <a
-          href="./index.html"
-          class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-white text-decoration-none fst-italic badge bg-primary text-wrap"
-          style="width: 6rem; height: 2.4rem"
-          >DREAM TRIP
-        </a>
-      </div>
+    <div class="wrapper">
+      <header>
+        <h1>Dream Trip</h1>
+        <nav>
+          <a href="#home" id="home" class="menu_link">Home</a>
+          <a href="#contact" class="menu_link">Help & Support</a>
+          <a href="./login-form.html" class="menu_link">Login</a>
+          <a href="" class="menu_link">Checkout</a>
+        </nav>
+      </header>
 
-      <div class="col-md-6 text-end">
-        <a
-          href="./login-form.html"
-          type="button"
-          class="btn btn-outline-primary me-2"
-        >
-          Login
-        </a>
-        <a type="button" class="btn btn-outline-primary me-2"> Logout </a>
-        <a href="/" type="button" class="btn btn-primary">Sign-up</a>
-        <button type="button" class="btn btn-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-basket"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"
-            ></path>
-          </svg>
-          Basket
-        </button>
-      </div>
-    </header>
 
-    <main style="height: 100%">
-      <form class="w-25 p-3 signup-form container center_div">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-        <div class="form-floating p-2">
-          <input
-            type="name"
-            class="form-control"
-            id="username-signup"
-            placeholder="name"
-          />
-          <label for="floatingInput">Name</label>
+    <main style="height: 450px">
+      <h2 class="main-text">Please signup</h2>
+        <div class="container-for-signup">
+          
+          <form class="signup-form">
+            <div class="email-block">
+              <input
+                type="email"
+                class="form-control"
+                id="email-signup"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div>
+              <input 
+                type="text"
+                class="form-control"
+                id="username-signup"
+                placeholder="Username"
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                class="form-control"
+                id="password-signup"
+                placeholder="Password"
+              />
+            </div>
+            <button class="login-form" type="submit">Login</button>
+          </form>
         </div>
-        <div class="form-floating p-2">
-          <input
-            type="email"
-            class="form-control"
-            id="email-signup"
-            placeholder="name@example.com"
-          />
-          <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating p-2">
-          <input
-            type="password"
-            class="form-control"
-            id="password-signup"
-            placeholder="Password"
-          />
-          <label for="floatingPassword">Password</label>
-        </div>
-
-        <button class="w-100 btn btn-lg btn-primary p-2" type="submit">
-          Sign in
-        </button>
-      </form>
     </main>
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-muted">About</a>
-        </li>
-      </ul>
-      <p class="text-center text-muted">© 2023 Dream-Trip, Inc</p>
-    </footer>
-    <script src="./js/signup.js"></script>
-  </body>
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="row">
+              <div class="footer-col">
+                  <h3>Company</h3>
+                  <ul>
+                      <li><a href="./terms-of-use.html">Terms of Use</li>
+                      <li><a href="#">Privacy Policy</li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h3>Platform</h3>
+                  <ul>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Travel hacks</a></li>
+                      <li><a href="#">Partnership</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h3>Support</h3>
+                  <ul>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Shipping</a></li>
+                      <li><a href="#">Returns</a></li>
+                      <li><a href="#">Order Status</a></li>
+                      <li><a href="#">Payment</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h3>Follow Us</h3>
+                  <div class="social-links">
+                      <a href="#">
+                          <ion-icon name="mail-outline"></ion-icon>
+                      </a>
+                      <a href="#">
+                          <ion-icon name="logo-facebook"></ion-icon>
+                      </a>
+                      <a href="#">
+                          <ion-icon name="logo-instagram"></ion-icon>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="logo">
+              <img src="./assets/img/logo.png">
+          </div>
+      </div>
+
+  </footer>
+  </div>
+  <script src="./js/signup.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
 </html>
