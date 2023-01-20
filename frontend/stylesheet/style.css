@@ -6,7 +6,7 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
     url("../assets/img/background.jpg");
@@ -54,6 +54,9 @@ nav a:hover {
   text-decoration: none;
   color: #777;
   transition: 0.5s;
+}
+main {
+  margin: 0 auto;
 }
 
 h2 {
@@ -172,6 +175,12 @@ ul {
 .logo {
   display: flex;
   justify-content: center;
+}
+/* make style for page terms-of-use */
+#blockText {
+  padding: 40px;
+  color: white;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 768px) {
