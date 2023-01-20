@@ -10,10 +10,10 @@ var cors = require('cors')
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: "Super secret secret",
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -21,6 +21,8 @@ const sess = {
     db: sequelize,
   }),
 };
+const exphbs = require("express-handlebars");
+const hbs = exphbs.create({});
 
 // Express middlewares
 app.use(cors())
