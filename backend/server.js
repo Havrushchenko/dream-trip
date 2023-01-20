@@ -1,11 +1,11 @@
-const path = require('path');
+const path = require("path");
 // Import and require express
-const express = require('express');
+const express = require("express");
 // Import and require express-session
-const session = require('express-session');
-const sequelize = require('./config/connection');
-const routes = require('./controllers');
-var cors = require('cors')
+const session = require("express-session");
+const sequelize = require("./config/connection");
+const routes = require("./controllers");
+var cors = require("cors");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -25,13 +25,15 @@ const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});
 
 // Express middlewares
-app.use(cors())
+app.use(cors());
 app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(routes);
 
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 // synchronize our sequelize models with our database tables
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening', PORT));
+  app.listen(PORT, () => console.log("Now listening", PORT));
 });
