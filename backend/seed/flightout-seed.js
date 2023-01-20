@@ -5,18 +5,14 @@ const flightoutdata = [
   {
     flight_number: 607,
     departure_city: 'San Francisco',
-    destination_city: 'Houston'
-  },
-  {
-    flight_number: 098,
-    departure_city: 'Dallas',
-    destination_city: 'New York'
-  },
-  {
-    flight_number: 001,
-    departure_city: 'New York',
-    destination_city: 'LA'
-  },
+    destination_city: 'New York',
+    departure_time: '07:00',
+    departure_day: 'Thu 2 Mar',
+    arrival_time: '15:13',
+    departure_airport: 'San Francisco International (SFO)',
+    destination_airport: 'New Ark Liberty International (EWR)',
+    price: 162
+  }
 ];
 
 const flightoutSeed = () => Flightout.bulkCreate(flightoutdata, {individualHooks: true});

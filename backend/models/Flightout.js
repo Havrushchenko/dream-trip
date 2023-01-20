@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our User model
+// create our Flightout model
 class Flightout extends Model { }
 
 // define table columns and configuration
@@ -23,6 +23,30 @@ Flightout.init(
         },
         destination_city: {
             type: DataTypes.STRING,
+            allowNull: false,
+        },
+        departure_time: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        departure_day: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        arrival_time: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        departure_airport: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        destination_airport: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        price: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
     },

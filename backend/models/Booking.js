@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our User model
+// create our Booking model
 class Booking extends Model { }
 
 // define table columns and configuration
@@ -20,15 +20,7 @@ Booking.init(
                 model: 'user',
                 key: 'id'
             }
-        },
-        ticket_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'ticket',
-                key: 'id'
-            }
-        },
+        }
     },
     {
         // pass in our imported sequelize connection (the direct connection to our database)

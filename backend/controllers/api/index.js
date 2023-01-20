@@ -1,9 +1,8 @@
 const router = require("express").Router();
-
 const userRoutes = require("./user-routes");
-// const termsRoutes = require("../terms-of-use");
+const flightoutRoutes = require('./flightout-routes');
 
 router.use("/users", userRoutes);
-// router.use("/using", termsRoutes);
+router.use('/flightouts', flightoutRoutes);
 
 module.exports = router;

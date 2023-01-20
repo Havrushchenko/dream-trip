@@ -25,7 +25,6 @@ User.init(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      // unique: true,
       validate: {
         isEmail: true,
       },
@@ -37,14 +36,6 @@ User.init(
         len: [4],
       },
     },
-    // current_ticket: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    //   references: {
-    //     model: "booking",
-    //     key: "price",
-    //   },
-    // },
   },
   {
     //add hooks

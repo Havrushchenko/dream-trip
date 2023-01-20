@@ -12,6 +12,16 @@ body {
     url("../assets/img/background.jpg");
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  border-radius: 5px;
+}
+
+/* HEADER / NAV BAR STYLES START */
 header {
   display: flex;
   position: relative;
@@ -59,10 +69,14 @@ main {
   margin: 0 auto;
 }
 
+/* HEADER / NAV BAR STYLES END */
+
+/* SLOGAN STYLES START */
 h2 {
   display: flex;
-  justify-content: center;
+  align-items: center;
   margin-top: 300px;
+  justify-content: center;
   margin-bottom: 0;
   padding: 10px;
   color: #fff;
@@ -70,31 +84,46 @@ h2 {
   text-transform: uppercase;
 }
 
+/* SLOGAN STYLES END */
+
+/* SEARCH FORM STYLES START */
 .container {
   width: 100%;
   display: flex;
+  flex-direction: column;
   margin-top: 0;
   align-items: center;
   justify-content: center;
 }
 
-form {
-  background: #fff;
+.search-form {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
   width: 600px;
   height: 40px;
   display: flex;
 }
 
 form input {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  color: #fff;
   flex: 1;
   border: none;
   outline: none;
   margin: 5px;
 }
 
+#departure,
+#destination,
+#datepicker {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
 form button {
   background: tomato;
-  padding: 10px;
+  font-size: 14px;
+  padding: 5px;
   border: none;
   outline: none;
   color: #fff;
@@ -110,15 +139,115 @@ form button:hover {
 }
 
 .datepicker {
-  width: 100px;
+  width: 80px;
 }
 
 .airplane {
   align-self: center;
   padding: 10px;
-  color: #777;
 }
 
+.departure-form,
+.destination-form {
+  align-self: center;
+  color: #fff;
+}
+
+/* SEARCH FORM STYLES END */
+
+/* RESULT CARDS STYLES START */
+.result-card-wrapper {
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  font-size: 14px;
+  background: #fff;
+  margin-top: 20px;
+  padding: 15px;
+  padding-right: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sector-badges {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+}
+
+.flight-number {
+  border-radius: 12px;
+  border: 1px solid rgb(208, 233, 251);
+  background: rgb(232, 244, 253);
+  color: rgb(0, 90, 163);
+  font-weight: 500;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.plane-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.departure-time,
+.destination-time,
+.departure-airport,
+.destination-airport {
+  font-weight: 500;
+}
+
+.result-card-wrapper:hover {
+  transition: 0.5s;
+}
+
+.result-card-actions {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgb(239, 242, 245);
+}
+
+.result-card-price {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(37, 42, 49);
+}
+
+#booking-button {
+  border: none;
+  outline: none;
+  background-color: rgb(0, 169, 145);
+  height: 32px;
+  width: 100px;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#booking-button:hover {
+  background-color: rgb(0, 131, 112);
+  transition: 0.5s;
+}
+
+/* RESULT CARDS STYLES END */
+
+/* FOOTER STYLES START */
 .footer-container {
   margin: auto;
 }
@@ -183,6 +312,9 @@ ul {
   font-size: 18px;
 }
 
+/* FOOTER STYLES END */
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
   header {
     padding: 0 0 10px 0;
@@ -197,16 +329,30 @@ ul {
     font-size: 7vw;
   }
 
-  h2 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    font-size: 4vw;
-  }
-
   header nav {
     justify-content: center;
+  }
+
+  .sign h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  form input {
+    width: 100px;
+  }
+
+  .datepicker {
+    display: flex;
+  }
+
+  .result-card-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 400px;
   }
 }
