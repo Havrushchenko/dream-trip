@@ -36,6 +36,6 @@
 
   ## Contributors:
   - Github: https://github.com/Havrushchenko
-  - Github:https://github.com/miklywek
+  - Github: https://github.com/miklywek
 
   This README.md is made with a [Proffesional Readme Generator](https://github.com/Havrushchenko/proffesional-readme-generator).
