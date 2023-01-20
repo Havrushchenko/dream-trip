@@ -14,35 +14,41 @@
 </head>
 
 <body>
+    <!-- navigation tags - block level element -->
     <header>
         <h1>Dream Trip</h1>
         <nav>
             <a href="#home" id="home" class="menu_link">Home</a>
-            <a href="#contact" class="menu_link">Help & Support</a>
+            <a href="#footer" class="menu_link">Help & Support</a>
             <a href="" class="menu_link">Login</a>
             <a href="" class="menu_link">Signup</a>
             <a href="" class="menu_link">Checkout</a>
         </nav>
     </header>
+    <!-- end navigation -->
+
     <main>
-        <div class="sign">
         <h2>Book cheap flights other sites simply can’t find</h2>
-    </div>
         <div class="container">
-            <form class="search-form">
+
+            <!-- search form container -->
+            <form class="search-form" id="search-form">
                 <img class="airplane" src="./assets/img/airplane.svg" />
                 <div class="departure-form">FROM</div>
-                <input placeholder="zsfsf" name="departure" type="text" id="departure"/>
+                <input name="departure" type="text" id="departure" autocomplete="off" />
                 <img class="airplane" src="./assets/img/airplane.svg" />
                 <div class="departure-form">TO</div>
-                <input name="destination" type="text" id="destination" />
+                <input name="destination" type="text" id="destination" autocomplete="off" />
                 <input class="datepicker" id="datepicker" placeholder="MM-DD-YY" />
                 <button id="search-button" value="submit">Search</button>
             </form>
+            <!-- search form container end-->
+
+            <!-- result cards -->
             <div class="result-card-wrapper">
                 <div class="result-card-main">
                     <div class="result-card-styled">
-                        <p class="departure-date">Mon 24.01</p>
+                        <p class="departure-date"></p>
                         <div class="result-card-departure">
                         </div>
                         <strong class="departure-date-city">
@@ -51,8 +57,9 @@
                                     class="bi bi-dot" viewBox="0 0 16 16">
                                     <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                 </svg>
-                                <time class="departure-time">11:05</time>
-                                <span class="departure-city">New-York</span>
+                                <time class="departure-time"></time>
+                                <span class="departure-city"></span>
+                                <span class="departure-airport"></span>
                         </strong>
                     </div>
                     <div class="result-card-inner-styled">
@@ -62,13 +69,9 @@
                                     <path fill-rule="evenodd"
                                         d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
                                 </svg></div>
-                            <div class="trip-duration">4h 35m</div>
-                            <div class="stop-count">Direct</div>
-                            <div class="plane-logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
-                                </svg></div>
+                            <!-- <div class="trip-duration">4h 35m</div> -->
+                            <div class="flight-number"></div>
+                            <img class="plane-logo" src="./assets/img/airplane.svg" />
                         </div>
                     </div>
                     <div class="result-card-destination">
@@ -77,8 +80,9 @@
                                 class="bi bi-dot" viewBox="0 0 16 16">
                                 <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                             </svg>
-                            <time class="destination-time">15:55</time>
-                            <span class="destination-city">Los Angeles</span>
+                            <time class="destination-time"></time>
+                            <span class="destination-city"></span>
+                            <span class="destination-airport"></span>
                         </strong>
                     </div>
                 </div>
@@ -88,10 +92,11 @@
                 <button id="booking-button">Order
             </div>
         </div>
-        </div>
-        </div>
+        <!-- result cards end -->
     </main>
-    <footer class="footer">
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
         <div class="footer-container">
             <div class="row">
                 <div class="footer-col">
@@ -138,8 +143,9 @@
                 <img src="./assets/img/logo.png">
             </div>
         </div>
-
     </footer>
+    <!-- result cards -->
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

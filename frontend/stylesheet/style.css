@@ -20,6 +20,7 @@ main {
   border-radius: 5px;
 }
 
+/* HEADER / NAV BAR STYLES START */
 header {
   display: flex;
   position: relative;
@@ -64,6 +65,9 @@ nav a:hover {
   transition: 0.5s;
 }
 
+/* HEADER / NAV BAR STYLES END */
+
+/* SLOGAN STYLES START */
 h2 {
   display: flex;
   align-items: center;
@@ -76,6 +80,9 @@ h2 {
   text-transform: uppercase;
 }
 
+/* SLOGAN STYLES END */
+
+/* SEARCH FORM STYLES START */
 .container {
   width: 100%;
   display: flex;
@@ -102,10 +109,6 @@ form input {
   outline: none;
   margin: 5px;
 }
-
-/* input::placeholder {
-  background-color: red
-} */
 
 #departure,
 #destination,
@@ -146,8 +149,11 @@ form button:hover {
   color: #fff;
 }
 
+/* SEARCH FORM STYLES END */
+
+/* RESULT CARDS STYLES START */
 .result-card-wrapper {
-  /* visibility: hidden; */
+  visibility: hidden;
   display: flex;
   justify-content: space-between;
   width: 600px;
@@ -157,7 +163,7 @@ form button:hover {
   padding: 15px;
   padding-right: 0;
   border-radius: 5px;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .sector-badges {
@@ -172,7 +178,7 @@ form button:hover {
   align-items: center;
 }
 
-.trip-duration {
+.flight-number {
   border-radius: 12px;
   border: 1px solid rgb(208, 233, 251);
   background: rgb(232, 244, 253);
@@ -182,30 +188,23 @@ form button:hover {
   padding: 5px;
 }
 
-.stop-count {
-  border-radius: 12px;
-  border: 1px solid rgb(232, 237, 241);
-  background: rgb(245, 247, 249);
-  color: black;
-  font-weight: 500;
-  font-size: 12px;
-  padding: 5px;
-  margin-left: 5px;
-}
-
 .plane-logo {
   display: flex;
   align-items: center;
   margin-left: 5px;
 }
 
-.departure-time, 
-.destination-time {
+.departure-time,
+.destination-time,
+.departure-airport,
+.destination-airport {
   font-weight: 500;
 }
+
 .result-card-wrapper:hover {
   transition: 0.5s;
 }
+
 .result-card-actions {
   display: flex;
   flex-direction: column;
@@ -242,17 +241,9 @@ form button:hover {
   transition: 0.5s;
 }
 
-.result-card-styled {
-  width: 250px;
-}
+/* RESULT CARDS STYLES END */
 
-.signup-container {
-  width: 360px;
-  height: 520px;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-
+/* FOOTER STYLES START */
 .footer-container {
   margin: auto;
 }
@@ -311,6 +302,9 @@ ul {
   justify-content: center;
 }
 
+/* FOOTER STYLES END */
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
   header {
     padding: 0 0 10px 0;
@@ -337,12 +331,6 @@ ul {
     padding: 5px;
     margin-bottom: 10px;
   }
-
-  /* .search-form {
-    display: flex;
-    justify-content: center;
-    width: 400px;
-  } */
 
   form input {
     width: 100px;

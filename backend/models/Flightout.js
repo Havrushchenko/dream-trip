@@ -25,6 +25,30 @@ Flightout.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        departure_time: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        departure_day: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        arrival_time: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        departure_airport: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        destination_airport: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        price: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
     },
     {
         // pass in our imported sequelize connection (the direct connection to our database)
