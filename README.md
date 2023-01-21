@@ -31,6 +31,14 @@
 
   ![User inputs](./frontend/assets/img/rendered-flight-card.png)
 
+  Sign Up form
+
+  ![Sign Up form](./frontend/assets/img/signup.png)
+
+  Login form
+
+  ![Login form](./frontend/assets/img/login.png)
+
   ## GitHub Link
   - https://github.com/Havrushchenko/dream-trip
 
