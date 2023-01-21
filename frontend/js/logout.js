@@ -9,7 +9,7 @@ function logout() {
     .then((dbData) => {
       console.log(dbData);
 
-      location.assign("login-form.html");
+      location.assign("login.html");
     })
     .catch((err) => {
       res.status(500), json(err);

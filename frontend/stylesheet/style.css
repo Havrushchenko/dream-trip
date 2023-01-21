@@ -407,6 +407,10 @@ ul {
   display: flex;
   justify-content: center;
 }
+#blockText{
+  margin-left: 15px;
+  color: #fff;
+}
 
 /* FOOTER STYLES END */
 
