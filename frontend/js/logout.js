@@ -7,8 +7,6 @@ function logout() {
       response.json();
     })
     .then((dbData) => {
-      console.log(dbData);
-
       location.assign("login.html");
     })
     .catch((err) => {

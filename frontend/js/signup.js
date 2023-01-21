@@ -6,7 +6,6 @@ function signupFormHandler(event) {
   const password = document.querySelector("#password-signup").value.trim();
 
   if (username && email && password) {
-    console.log(username);
     fetch("http://localhost:3001/api/users/signup", {
       method: "post",
       body: JSON.stringify({

@@ -6,7 +6,6 @@ function termsOfUse() {
       return response.text();
     })
     .then((data) => {
-      console.log(data);
       const blockText = document.querySelector("#blockText");
       blockText.innerHTML = data;
     });
