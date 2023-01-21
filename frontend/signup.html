@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css"
-    />
-    <link rel="stylesheet" href="./stylesheet/auth.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
+    <link rel="stylesheet" href="./stylesheet/style.css" />
     <title>Dream Trip</title>
-  </head>
+</head>
 
-  <body>
-    <div class="wrapper">
-      <header>
+<body>
+    <!-- navigation tags - block level element -->
+    <header>
         <h1>Dream Trip</h1>
         <nav>
-          <a href="#home" id="home" class="menu_link">Home</a>
-          <a href="#contact" class="menu_link">Help & Support</a>
-          <a href="./signup-form.html" class="menu_link">Signup</a>
-          <a href="" class="menu_link">Checkout</a>
+            <a href="#home" id="home" class="menu_link">Home</a>
+            <a href="#contact" class="menu_link">Help & Support</a>
+            <a href="./login.html" id="logout" class="menu_link">Login</a>
+            <a href="" class="menu_link">Checkout</a>
         </nav>
-      </header>
+    </header>
+    <!-- end navigation -->
 
-      <main>
-        <h2 class="main-text">Please login</h2>
-        <div class="container-for-login">
-          
-          <form class="login-form">
-            <div class="email-block">
-              <input
-                type="email"
-                class="form-control"
-                id="email-login"
-                placeholder="name@example.com"
-              />
+    <main>
+        <div class="signup-container">
+            <div class="signup-box">
+                <h1 class="signup">Sign Up</h1>
+                <h4>It's free and only takes a minute</h4>
+                <form class="signup-form">
+                    <label>Username</label>
+                    <input type="text" placeholder="" />
+                    <label>Email</label>
+                    <input type="email" placeholder="" />
+                    <label>Password</label>
+                    <input type="password" placeholder="" />
+                    <input type="button" value="Submit" />
+                </form>
+                <p class="term-of-use">
+                    By clicking the Sign Up button you agree to our <a href="#">Terms of Use</a>
+                </p>
             </div>
-            <div>
-              <input
-                type="password"
-                class="form-control"
-                id="password-login"
-                placeholder="Password"
-              />
-            </div>
-            <button class="login-form" type="submit">Login</button>
-          </form>
         </div>
-      </main>
-      <footer class="footer">
+            <p class="para-2">
+                Already have an account? <a href="login.html">Login here</a>
+              </p>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
         <div class="footer-container">
             <div class="row">
                 <div class="footer-col">
                     <h3>Company</h3>
                     <ul>
                         <li><a href="./terms-of-use.html">Terms of Use</li>
-                        <li><a href="#">Privacy Policy</li>
+                        <li><a href="#">Privacy</li>
+                        <li><a href="#">Policy</li>
+
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -96,14 +100,14 @@
                 <img src="./assets/img/logo.png">
             </div>
         </div>
-
     </footer>
-    </div>
-    <script src="./js/login.js"></script>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
+    <script src="./js/search-form.js"></script>
+</body>
+
 </html>
