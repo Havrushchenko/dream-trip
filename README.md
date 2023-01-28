@@ -23,6 +23,10 @@
 
   ![Full screen on tablets and smaller](./frontend/assets/img/full-screen-on-tablets-and-smaller.png)
 
+  Burger menu
+
+  ![Burger menu](./frontend/assets/img/burger-menu.png)
+
   User inputs
 
   ![User inputs](./frontend/assets/img/user-inputs.png)

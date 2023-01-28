@@ -18,16 +18,14 @@ main {
   justify-content: center;
   align-items: center;
   height: 400px;
-  border-radius: 5px;
 }
 
 /* HEADER / NAV BAR STYLES START */
-header {
+.navigation-container {
   display: flex;
   position: relative;
   padding: 15px 10px;
   top: 0;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -36,20 +34,28 @@ header {
   z-index: 9999;
 }
 
-header h1 {
-  padding: 10px 5px 10px 10px;
-  margin-left: 20px;
-  font-size: 2vw;
-  line-height: 1;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 20px;
+}
+
+.logo h1 {
+  font-size: 2vw;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.navigation-wrapper {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 nav a {
@@ -65,10 +71,11 @@ nav a:hover {
   color: #777;
   transition: 0.5s;
 }
-main {
-  margin: 0 auto;
-}
 
+nav #toggle,
+nav label {
+  display: none;
+}
 /* HEADER / NAV BAR STYLES END */
 
 /* SLOGAN STYLES START */
@@ -407,16 +414,45 @@ ul {
   display: flex;
   justify-content: center;
 }
+
+.copy {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 0;
+  font-size: 13px;
+}
+/* FOOTER STYLES END */
+
+/* TERMS OF USE */
 #blockText{
   margin-left: 15px;
   color: #fff;
 }
 
-/* FOOTER STYLES END */
-
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-  header {
+  nav .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .navigation-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  nav label {
+    display: inline-flex;
+    color: white;
+    cursor: pointer;
+  }
+  nav #toggle:checked ~ .menu {
+    height: 100%;
+  }
+  /* header {
     padding: 0 0 10px 0;
     justify-content: center;
     text-align: center;
@@ -454,5 +490,5 @@ ul {
     display: flex;
     justify-content: center;
     width: 400px;
-  }
+  } */
 }

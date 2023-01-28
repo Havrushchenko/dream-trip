@@ -9,27 +9,40 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./stylesheet/style.css" />
     <title>Dream Trip</title>
 </head>
 
 <body>
+
     <!-- navigation tags - block level element -->
     <header>
-        <h1>Dream Trip</h1>
-        <nav>
-            <a href="#home" id="home" class="menu_link">Home</a>
-            <a href="#footer" class="menu_link">Help & Support</a>
-            <a  href="#" id="logout" class="menu_link">Logout</a>
-            <a href="" class="menu_link">Checkout</a>
+        <nav class="navigation-container">
+            <a href="/" class="logo">
+                <h1>Dream Trip</h1>
+            </a>
+            <input type="checkbox" name="" id="toggle">
+            <label for="toggle"><i class="material-icons">menu</i></label>
+            <div class="menu">
+                <div class="navigation-wrapper">
+                    <a href="#home" id="home" class="menu_link">Home</a>
+                    <a href="#footer" class="menu_link">Help & Support</a>
+                    <a href="#" id="logout" class="menu_link">Logout</a>
+                    <a href="" class="menu_link">Checkout</a>
+                    <div class="weather-container">
+                </div> 
+                </div>
+            </div>
         </nav>
     </header>
     <!-- end navigation -->
 
+    <div id="current-weather"></div>
     <main>
-        <h2>Book cheap flights other sites simply can't find</h2>
         <div class="container">
-
+            <h2>Book cheap flights other sites simply can't find</h2>
+            
             <!-- search form container -->
             <form class="search-form" id="search-form">
                 <img class="airplane" src="./assets/img/airplane.svg" />
@@ -38,7 +51,7 @@
                 <img class="airplane" src="./assets/img/airplane.svg" />
                 <div class="departure-form">TO</div>
                 <input name="destination" type="text" id="destination" autocomplete="off" />
-                <input class="datepicker" id="datepicker" placeholder="MM-DD-YY" />
+                <input class="datepicker" id="datepicker" placeholder="MM-DD-YY" autocomplete="off" />
                 <button id="search-button" value="submit">Search</button>
             </form>
             <!-- search form container end-->
@@ -68,7 +81,6 @@
                                     <path fill-rule="evenodd"
                                         d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
                                 </svg></div>
-                            <!-- <div class="trip-duration">4h 35m</div> -->
                             <div class="flight-number"></div>
                             <img class="plane-logo" src="./assets/img/airplane.svg" />
                         </div>
@@ -103,9 +115,9 @@
                     <h3>Company</h3>
                     <ul>
                         <li><a href="./terms-of-use.html">Terms of Use</li>
-                         <li><a href="#">Privacy</li>
-                         <li><a href="#">Policy</li>
-                          
+                        <li><a href="#">Privacy</li>
+                        <li><a href="#">Policy</li>
+
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -144,15 +156,16 @@
             <div class="logo">
                 <img src="./assets/img/logo.png">
             </div>
+            <div class="copy">Copyright &copy<span id="year"></span>-Dream Trip</div>
         </div>
     </footer>
-    <!-- result cards -->
+    <!-- footer end -->
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/search-form.js"></script>
     <script src="./js/logout.js"></script>
 </body>

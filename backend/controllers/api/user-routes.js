@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 router.post("/signup", (req, res) => {
-  //to do add check body params(if(!username || !email))
   const username = req.body.username;
   const email = req.body.email;
   const password = req.body.password;
